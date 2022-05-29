@@ -21,10 +21,7 @@ export const Navbar = () => {
           />
         </div>
         <div class="user-activity-details">
-          {/* <FiFilter
-            className="filter-icon"
-            onClick={() => showFilterOption((prev) => !prev)}
-          /> */}
+          
         </div>
       </div>
     </nav>

@@ -3,7 +3,6 @@ import { FiFilter } from "react-icons/fi";
 import { Link } from "react-router-dom";
 import "./navbar.css";
 export const Navbar = () => {
-  const [filterOption, showFilterOption] = useState(false);
   return (
     <nav class="navbar">
       <div class="navbar-wrapper">
@@ -22,10 +21,10 @@ export const Navbar = () => {
           />
         </div>
         <div class="user-activity-details">
-          <FiFilter
+          {/* <FiFilter
             className="filter-icon"
             onClick={() => showFilterOption((prev) => !prev)}
-          />
+          /> */}
         </div>
       </div>
     </nav>

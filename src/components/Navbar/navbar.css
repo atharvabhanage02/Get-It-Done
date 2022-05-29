@@ -1,0 +1,31 @@
+.navbar-wrapper{
+  background-color: #152B75;
+  position: fixed;
+  top: 0;
+}
+.filter-icon {
+  color: white;
+  font-size: 25px;
+  cursor: pointer;
+  padding: 8px;
+  border: 1px solid #152B75;
+  border-radius: 50%;
+}
+.filter-icon:hover {
+  color: white;
+  transition: 0.3s;
+  border: 1px solid white;
+  background-color: #354477;
+}
+.navbar-wrapper {
+  margin-top: 0px;
+  border-radius: 0px;
+  /* background-color: white; */
+}
+/* .ecom-name{
+  color: blue;
+} */
+/* Secondary paytm color */
+/* {
+  color:#0F4A8A;
+} */

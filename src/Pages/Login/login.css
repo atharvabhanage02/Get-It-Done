@@ -91,7 +91,3 @@
 .login-guest-btn:hover {
   background-color: var(--guest-login-btn-hover);
 }
-p,
-h1 {
-  margin: 0;
-}

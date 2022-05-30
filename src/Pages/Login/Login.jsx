@@ -1,38 +1,19 @@
 import { Link, useNavigate } from "react-router-dom";
-import axios from "axios";
 import { Navbar } from "../../components/Navbar/Navbar";
 import "./login.css";
+import { loginHandler } from "../../Utils/loginHandler";
 import { useAuth } from "../../Context/Auth/auth-context";
+import { useState } from "react";
 const Login = () => {
-  const { setAuth } = useAuth();
+  const { auth, setAuth } = useAuth();
   const navigate = useNavigate();
-  // const [logUser, setLogUser] = useState({
-  //   email: "",
-  //   pass: "",
-  // });
+  const [user, setUser] = useState({
+    email: "",
+    pass: "",
+  });
   const guestLogin = {
     email: "abc@gmail.com",
     pass: "Atharva123",
-  };
-  const loginHandler = ({ email, pass }, setAuth, navigate) => {
-    (async () => {
-      try {
-        const { data, status } = await axios.post("/api/auth/login", {
-          email: email,
-          password: pass,
-        });
-        if (status === 200) {
-          localStorage.setItem("token", JSON.stringify(data.encodedToken));
-          setAuth({
-            tokenValue: JSON.stringify(data.encodedToken),
-            isLogIn: true,
-          });
-          navigate("/notes");
-        }
-      } catch (error) {
-        console.log("Error occured", error);
-      }
-    })();
   };
   return (
     <div>
@@ -48,6 +29,8 @@ const Login = () => {
                 class="email-validate"
                 id="email-label"
                 placeholder="Enter Valid Email ID"
+                onChange={(e) => setUser({ ...user, email: e.target.value })}
+                required
               />
             </div>
             <div class="password">
@@ -56,6 +39,8 @@ const Login = () => {
                 type="password"
                 class="pswrd-validate"
                 id="password-label"
+                onChange={(e) => setUser({ ...user, pass: e.target.value })}
+                required
               />
             </div>
             <div class="reset-details">
@@ -68,12 +53,18 @@ const Login = () => {
                 Forget your Password?
               </a>
             </div>
-            <button class="login-btn">Login</button>
+            <button
+              class="login-btn"
+              onClick={() => loginHandler(user, setAuth, navigate)}
+            >
+              Login
+            </button>
             <button
               class="login-btn login-guest-btn"
               onClick={(e) => {
                 e.preventDefault();
                 loginHandler(guestLogin, setAuth, navigate);
+                console.log("login state is ", auth.isLogIn);
               }}
             >
               Login as Guest

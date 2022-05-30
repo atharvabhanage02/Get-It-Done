@@ -1,5 +1,3 @@
-import { useState } from "react";
-import { FiFilter } from "react-icons/fi";
 import { Link } from "react-router-dom";
 import "./navbar.css";
 export const Navbar = () => {
@@ -20,9 +18,7 @@ export const Navbar = () => {
             placeholder="Search"
           />
         </div>
-        <div class="user-activity-details">
-          
-        </div>
+        <div class="user-activity-details"></div>
       </div>
     </nav>
   );

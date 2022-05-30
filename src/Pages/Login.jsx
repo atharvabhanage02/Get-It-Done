@@ -1,7 +1,7 @@
-import "./login.css";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { Navbar } from "../components/Navbar/Navbar";
+import "./login.css";
 import { useAuth } from "../Context/Auth/auth-context";
 const Login = () => {
   const { setAuth } = useAuth();

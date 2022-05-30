@@ -1,10 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
-body {
-  font-family: "Lato", sans-serif;
-}
 :root {
   --guest-login-btn-hover: #dcdcf8;
-  --login-btn-hover: #5b5bf8;
+  --login-btn-hover: #344680;
+  --login-box-shadow: rgba(0, 0, 0, 0.35);
+  --notes-primary-color: #152b75;
+
 }
 .login-wrapper {
   height: 100vh;
@@ -14,20 +13,19 @@ body {
   align-items: center;
 }
 .login {
-  /* margin-top: 1rem; */
   max-width: 25rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1.56rem;
   padding: 1.56rem;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  box-shadow: var(--login-box-shadow) 0px 5px 15px;
 }
 .email-validate,
 .pswrd-validate {
   padding: 8px;
-  color: grey;
-  border: 1px solid grey;
+  color: var(--txt-grey-500);
+  border: 1px solid var(--txt-grey-300);
   outline: none;
   border-radius: 5px;
 }
@@ -57,18 +55,18 @@ body {
   text-decoration: none;
 }
 .login-btn {
-  color: white;
+  color: var(--txt-white);
   margin-top: 2px;
   font-weight: bolder;
   border: none;
   font-size: 1rem;
   padding: 10px;
   border-radius: 5px;
-  background-color: #152B75;
+  background-color: var(--notes-primary-color);
   cursor: pointer;
 }
 .login-btn:hover {
-  background-color: #344680;
+  background-color: var(--login-btn-hover);
 }
 .have-account-link {
   text-align: center;
@@ -88,9 +86,12 @@ body {
 }
 .login-guest-btn {
   background-color: white;
-  color: #152B75;
-  border: 1px solid #152B75;
+  color: var(--notes-primary-color);
+  border: 1px solid var(--notes-primary-color);
 }
 .login-guest-btn:hover {
   background-color: var(--guest-login-btn-hover);
+}
+p,h1{
+  margin: 0;
 }

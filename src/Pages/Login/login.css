@@ -3,7 +3,6 @@
   --login-btn-hover: #344680;
   --login-box-shadow: rgba(0, 0, 0, 0.35);
   --notes-primary-color: #152b75;
-
 }
 .login-wrapper {
   height: 100vh;
@@ -92,6 +91,7 @@
 .login-guest-btn:hover {
   background-color: var(--guest-login-btn-hover);
 }
-p,h1{
+p,
+h1 {
   margin: 0;
 }

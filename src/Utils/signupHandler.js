@@ -1,9 +1,9 @@
 import axios from "axios";
-const signupHandler = async (firstN, lastN, email, pswrd) => {
+const signupHandler = async (firstname, lastname, email, pswrd) => {
   try {
     const { data } = await axios.post(`/api/auth/signup`, {
-      firstName: firstN,
-      lastName: lastN,
+      firstName: firstname,
+      lastName: lastname,
       email: email,
       password: pswrd,
     });

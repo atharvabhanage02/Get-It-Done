@@ -64,7 +64,6 @@ const Login = () => {
               onClick={(e) => {
                 e.preventDefault();
                 loginHandler(guestLogin, setAuth, navigate);
-                console.log("login state is ", auth.isLogIn);
               }}
             >
               Login as Guest

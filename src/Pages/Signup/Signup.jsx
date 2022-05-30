@@ -11,7 +11,7 @@ const Signup = () => {
           <div class="login-credentials">
             <div class="user-name">
               <div class="first-name">
-                <p for="">First Name</p>
+                <p>First Name</p>
                 <input
                   type="text"
                   class="email-validate"
@@ -19,7 +19,7 @@ const Signup = () => {
                 />
               </div>
               <div class="last-name">
-                <p for="">Last name</p>
+                <p>Last name</p>
                 <input
                   type="text"
                   class="email-validate"

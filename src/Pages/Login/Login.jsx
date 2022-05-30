@@ -11,8 +11,8 @@ const Login = () => {
   //   pass: "",
   // });
   const guestLogin = {
-    email: "adarshbalika@gmail.com",
-    pass: "adarshBalika123",
+    email: "abc@gmail.com",
+    pass: "Atharva123",
   };
   const loginHandler = ({ email, pass }, setAuth, navigate) => {
     (async () => {

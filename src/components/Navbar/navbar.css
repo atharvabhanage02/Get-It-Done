@@ -1,6 +1,7 @@
 :root {
   --filter-icon-hover: #354477;
   --txt-white: white;
+  --txt-black: black;
 }
 .navbar-wrapper {
   background-color: var(--notes-primary-color);

@@ -1,8 +1,13 @@
 import "./notes-display.css";
-import { BiArchiveIn, BiEdit, BiArchiveOut } from "react-icons/bi";
-import { FaTrashRestoreAlt } from "react-icons/fa";
-import { BsPin, BsPinFill } from "react-icons/bs";
-import { AiOutlineDelete } from "react-icons/ai";
+import {
+  BiArchiveIn,
+  BiEdit,
+  BiArchiveOut,
+  FaTrashRestoreAlt,
+  BsPin,
+  BsPinFill,
+  AiOutlineDelete,
+} from "../../Utils/icons";
 import { useNotes } from "../../Context/NotesContext/NotesContext";
 import { useLocation } from "react-router-dom";
 const NotesDisplay = ({ notesData }) => {

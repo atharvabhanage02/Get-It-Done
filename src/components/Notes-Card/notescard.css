@@ -1,8 +1,8 @@
 :root {
-  --notes-red-bg: red;
-  --notes-blue-bg: blue;
-  --notes-green-bg: green;
-  --notes-yellow-bg: yellow;
+  --notes-red-bg: #ff0000;
+  --notes-blue-bg: #0000ff;
+  --notes-green-bg: #008000;
+  --notes-yellow-bg: #ffff00;
 }
 .notes-card {
   margin: auto;

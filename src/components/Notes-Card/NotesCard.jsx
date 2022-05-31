@@ -5,9 +5,11 @@ import { useState } from "react";
 import { useNotes } from "../../Context/NotesContext/NotesContext";
 import { ColorPallete } from "../ColorPallete/ColorPallete";
 import { Priority } from "../Priority/Priority";
+import { Label } from "../Label/Label";
 const NotesCard = () => {
   const [showColors, setColors] = useState(false);
   const [showPriorityOptions, setPriorityOptions] = useState(false);
+  const [showlabels, setShowLabels] = useState(false);
   const { notesList, addUserNote, noteState, dispatchNote, updateUserNote } =
     useNotes();
   const isNotePresent = notesList.some((item) => item._id === noteState._id);
@@ -53,10 +55,21 @@ const NotesCard = () => {
             <span className="priority-tag">{noteState.priority}</span>
           )}
           <div className="label-tag-wrapper">
-            {/* Labels will be placed here */}
+            {noteState.labels &&
+              noteState.labels.map((label) => {
+                return (
+                  <div className="label-tag">
+                    {label}
+                    <span className="close-tag">X</span>
+                  </div>
+                );
+              })}
           </div>
           <div className="notes-options">
-            <BiLabel className="notes-card-icons" />
+            <BiLabel
+              className="notes-card-icons"
+              onClick={() => setShowLabels((prev) => !prev)}
+            />
             <BiPalette
               className="notes-card-icons"
               onClick={() => setColors((prev) => !prev)}
@@ -84,6 +97,7 @@ const NotesCard = () => {
         </form>
       </div>
       {showPriorityOptions && <Priority showPriority={setPriorityOptions} />}
+      {showlabels && <Label showlabels={setShowLabels} />}
     </div>
   );
 };

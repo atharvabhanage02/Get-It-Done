@@ -15,7 +15,7 @@ const NotesContext = createContext();
 const NotesProvider = ({ children }) => {
   const { auth } = useAuth();
   const [notesList, setNotesList] = useState([]);
-  const [tags, setTags] = useState(["Home"]);
+  const [tags, setTags] = useState(["College"]);
   useEffect(() => {
     if (auth.isLogin) {
       (async () => {

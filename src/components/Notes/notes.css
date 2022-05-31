@@ -1,0 +1,38 @@
+.main-content {
+  flex-grow: 1;
+  margin-top: 3rem;
+  margin-left: 13rem;
+  padding: 1.25rem 3.12rem;
+}
+.add-note-icon {
+  color: white;
+  position: fixed;
+  font-size: 1.87rem;
+  right: 6.25rem;
+  bottom: 3.62rem;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 30%;
+  background-color: var(--notes-primary-color);
+}
+.add-note-icon:hover {
+  font-weight: bold;
+  transition: 0.8s;
+  border-radius: 50%;
+}
+.all-notes-display {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+  margin: 2.5rem 10px;
+}
+.unpinned-notes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+}

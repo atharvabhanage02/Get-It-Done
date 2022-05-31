@@ -15,20 +15,29 @@ export const Navbar = () => {
         <div class="ecom-title">
           <div class="ecom-name">📝GetItDone</div>
         </div>
-        <div class="search-container">
-          <i class="fa fa-search"></i>
-          <input
-            type="text"
-            class="search-bar"
-            aria-hidden="true"
-            placeholder="Search"
-          />
-        </div>
+        {isLogIn && (
+          <div class="search-container">
+            <i class="fa fa-search"></i>
+            <input
+              type="text"
+              class="search-bar"
+              aria-hidden="true"
+              placeholder="Search"
+            />
+          </div>
+        )}
         <div class="user-activity-details">
-          <FiFilter className="filter-icon" />
-          {isLogIn ? (
-            <FiLogOut className="filter-icon" onClick={() => logOutUser()} />
-          ) : null}
+          {isLogIn && (
+            <span data-tooltip="Filter">
+              <FiFilter className="filter-icon" />
+            </span>
+          )}
+
+          {isLogIn && (
+            <span data-tooltip="Logout">
+              <FiLogOut className="filter-icon" onClick={() => logOutUser()} />
+            </span>
+          )}
         </div>
       </div>
     </nav>

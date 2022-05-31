@@ -45,7 +45,7 @@
   background-color: var(--notes-primary-color);
   color: var(--txt-white);
   border: 1px solid var(--txt-white);
-  transition: 0.5s;
+  transition: 0.8s;
   border-radius: 15px;
 }
 .category-names:hover .home-page-icons {

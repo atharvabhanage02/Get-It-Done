@@ -1,6 +1,5 @@
 import "./notes.css";
 import { NotesCard } from "../Notes-Card/NotesCard";
-import { AiOutlinePlus } from "react-icons/ai";
 import { NotesDisplay } from "../NotesTemplate/NotesDisplay";
 import { useNotes } from "../../Context/NotesContext/NotesContext";
 
@@ -17,7 +16,6 @@ export const Notes = () => {
           })}
         </div>
       </div>
-      <AiOutlinePlus className="add-note-icon" />
     </div>
   );
 };

@@ -1,16 +1,16 @@
 .notes-priority {
-  width: 100px;
-  padding: 15px;
+  width: 6.25rem;
+  padding: 1rem;
   display: flex;
   flex-direction: column;
   border-radius: 10px;
   gap: 10px;
-  border: 1px solid grey;
+  border: 1px solid var(--grey-300);
   position: absolute;
-  top: 262px;
-  right: 396px;
-  color: white;
+  top: 16.37rem;
+  right: 24.75rem;
+  color: var(--txt-white);
   font-weight: bold;
-  background-color: #152b75;
+  background-color: var(--notes-primary-color);
   z-index: 999999;
 }

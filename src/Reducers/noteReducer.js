@@ -18,7 +18,6 @@ const noteReducer = (state, action) => {
     case "SET_PRIORITY":
       console.log("Code reached reducer of Priority");
       return { ...state, priority: action.payload };
-    case "SET_PIN_STATE":
     case "UPDATE_NOTE":
       return { ...action.payload };
     case "ADD_LABEL":

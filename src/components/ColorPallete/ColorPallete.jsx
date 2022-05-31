@@ -2,7 +2,7 @@ import { useNotes } from "../../Context/NotesContext/NotesContext";
 
 const ColorPallete = ({ setShowColorPallete }) => {
   const colors = ["red", "blue", "green", "yellow"];
-  const { changeColor, dispatchNote } = useNotes();
+  const { dispatchNote } = useNotes();
   return (
     <div className="pallete-div">
       {colors.map((color) => {

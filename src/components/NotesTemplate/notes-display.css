@@ -1,6 +1,6 @@
 .notes-display-card {
   border: none;
-  width: 310px;
+  width: 19.37rem;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -8,7 +8,6 @@
   border-radius: 10px;
   box-shadow: var(--card-shadow);
   position: relative;
-  /* background-color: red; */
 }
 .notes-card-content {
   display: flex;
@@ -17,7 +16,7 @@
   flex-direction: column;
 }
 .pin-icon {
-  color: red;
+  color: var(--dark-red);
   font-size: 1.2rem;
   padding: 10px;
   font-weight: bold;
@@ -27,39 +26,22 @@
   right: 2px;
 }
 .pin-icon:hover {
-  color: red;
+  color: var(--dark-red);
 }
 .notes-user-options {
   display: flex;
   justify-content: space-evenly;
 }
 .all-notes-cards {
-  /* display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center; */
-  margin: 20px;
-  gap: 100px;
+  margin: 1.25rem;
+  gap: 6.25rem;
 }
-.red {
-  background-color: red;
-  transition: 1s;
-}
-.green {
-  background-color: green;
-}
-.blue {
-  background-color: blue;
-}
-.yellow {
-  background-color: yellow;
-}
-.priority-tag{
+.priority-tag {
   width: fit-content;
   padding: 5px 10px;
   font-size: 14px;
-  border-radius: 15px;
-  background-color: white;
+  border-radius: 1rem;
+  background-color: var(--txt-white);
   font-weight: bold;
-  border: 1px solid black;
+  border: 1px solid var(--txt-black);
 }

@@ -8,13 +8,8 @@ import { Priority } from "../Priority/Priority";
 const NotesCard = () => {
   const [showColors, setColors] = useState(false);
   const [showPriorityOptions, setPriorityOptions] = useState(false);
-  const {
-    notesList,
-    addUserNote,
-    noteState,
-    dispatchNote,
-    updateUserNote,
-  } = useNotes();
+  const { notesList, addUserNote, noteState, dispatchNote, updateUserNote } =
+    useNotes();
   const isNotePresent = notesList.some((item) => item._id === noteState._id);
   const submitHandler = (e) => {
     e.preventDefault();
@@ -58,15 +53,7 @@ const NotesCard = () => {
             <span className="priority-tag">{noteState.priority}</span>
           )}
           <div className="label-tag-wrapper">
-            {noteState.labels &&
-              noteState.labels.map((label) => {
-                return (
-                  <div className="label-tag">
-                    {label}
-                    <span className="close-tag">X</span>
-                  </div>
-                );
-              })}
+            {/* Labels will be placed here */}
           </div>
           <div className="notes-options">
             <BiLabel className="notes-card-icons" />

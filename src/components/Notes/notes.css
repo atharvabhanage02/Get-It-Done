@@ -7,34 +7,32 @@
 .add-note-icon {
   color: white;
   position: fixed;
-  font-size: 30px;
-  right: 100px;
-  bottom: 58px;
+  font-size: 1.87rem;
+  right: 6.25rem;
+  bottom: 3.62rem;
   cursor: pointer;
   padding: 8px;
   border-radius: 30%;
-  background-color: #152B75;
+  background-color: var(--notes-primary-color);
 }
 .add-note-icon:hover {
   font-weight: bold;
   transition: 0.8s;
   border-radius: 50%;
 }
-.all-notes-display{
+.all-notes-display {
   display: flex;
-  /* border: 1px solid red; */
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: 40px;
+  gap: 2.5rem;
   flex-wrap: wrap;
-  margin: 40px  10px;
-  /* margin-left: 15rem; */
+  margin: 2.5rem 10px;
 }
-.unpinned-notes{
+.unpinned-notes {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  gap: 40px;
+  gap: 2.5rem;
 }

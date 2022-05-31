@@ -62,9 +62,6 @@ const NotesProvider = ({ children }) => {
       console.log("Error occured in context while deleting", error);
     }
   };
-  const changeColor = (NoteCard, chosenColor) => {
-    updateNotesService({ ...NoteCard, color: chosenColor });
-  };
   const updateUserNote = async (NoteCard) => {
     try {
       const {
@@ -96,7 +93,6 @@ const NotesProvider = ({ children }) => {
         notesInTrash,
         deleteNote,
         updateUserNote,
-        changeColor,
         noteState,
         dispatchNote,
         tags,

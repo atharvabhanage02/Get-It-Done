@@ -30,3 +30,33 @@
 /* {
   color:#0F4A8A;
 } */
+/* ToolTip */
+[data-tooltip] {
+  position: relative;
+  cursor: default;
+}
+[data-tooltip]::after {
+  position: absolute;
+  width: fit-content;
+  right: calc(20% - 20px);
+  top: 95%;
+  text-align: center;
+  box-sizing: border-box;
+  color: black;
+  background-color: white;
+  border: 1px solid var(--notes-primary-color);
+  padding: 3px;
+  border-radius: 10px;
+  visibility: hidden;
+  opacity: 0;
+  font-size: 14px;
+  font-weight: bold;
+  transform: translateX(10px);
+  transition: opacity 0.3s, transform 0.2s;
+  content: attr(data-tooltip);
+}
+[data-tooltip]:hover::after {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}

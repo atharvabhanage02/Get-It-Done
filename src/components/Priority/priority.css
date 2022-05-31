@@ -1,0 +1,16 @@
+.notes-priority {
+  width: 100px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  gap: 10px;
+  border: 1px solid grey;
+  position: absolute;
+  top: 262px;
+  right: 396px;
+  color: white;
+  font-weight: bold;
+  background-color: #152b75;
+  z-index: 999999;
+}

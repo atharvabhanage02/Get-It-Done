@@ -25,12 +25,6 @@
   margin-top: 0px;
   border-radius: 0px;
 }
-
-/* Secondary paytm color */
-/* {
-  color:#0F4A8A;
-} */
-/* ToolTip */
 [data-tooltip] {
   position: relative;
   cursor: default;

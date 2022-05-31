@@ -1,0 +1,65 @@
+.notes-display-card {
+  border: none;
+  width: 310px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: var(--card-shadow);
+  position: relative;
+  /* background-color: red; */
+}
+.notes-card-content {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-direction: column;
+}
+.pin-icon {
+  color: red;
+  font-size: 1.2rem;
+  padding: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  position: absolute;
+  top: 1px;
+  right: 2px;
+}
+.pin-icon:hover {
+  color: red;
+}
+.notes-user-options {
+  display: flex;
+  justify-content: space-evenly;
+}
+.all-notes-cards {
+  /* display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center; */
+  margin: 20px;
+  gap: 100px;
+}
+.red {
+  background-color: red;
+  transition: 1s;
+}
+.green {
+  background-color: green;
+}
+.blue {
+  background-color: blue;
+}
+.yellow {
+  background-color: yellow;
+}
+.priority-tag{
+  width: fit-content;
+  padding: 5px 10px;
+  font-size: 14px;
+  border-radius: 15px;
+  background-color: white;
+  font-weight: bold;
+  border: 1px solid black;
+}

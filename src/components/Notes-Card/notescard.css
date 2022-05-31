@@ -1,0 +1,135 @@
+.notes-card {
+  margin: auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  width: 470px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: 1px solid grey;
+  position: relative;
+  z-index: 0;
+  /* background-color: #152b75; */
+}
+.title-input {
+  width: 90%;
+  padding: 5px;
+  font-size: 1.5rem;
+  margin: 10px;
+}
+.description-input {
+  width: 90%;
+  padding: 5px;
+  font-size: 1rem;
+}
+.notes-options {
+  margin: 10px 3px 5px 3px;
+}
+.notes-card-icons {
+  cursor: pointer;
+  padding: 8px;
+  font-size: 1.4rem;
+  border-radius: 50%;
+  /* border: 1px solid white; */
+}
+.notes-card-icons:hover {
+  /* color: #6565f8; */
+  color: white;
+  background-color: #152b75;
+  transition: 0.6s;
+  transform: translateY(-5px);
+  /* background-color: #6565f8; */
+}
+.card-delete-icon:hover {
+  color: red;
+  transition: 0.3s;
+}
+/* .card-archive-icon:hover{
+  color: #eed202;
+} */
+
+.color-select {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.red {
+  background-color: red;
+}
+.blue {
+  background-color: blue;
+}
+.green {
+  background-color: green;
+}
+.yellow {
+  background-color: yellow;
+}
+/* New design */
+.user-input-field {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.notes-options {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 10px 3px 5px 3px;
+}
+.pallete-div {
+  position: absolute;
+  top: 175px;
+  right: 120px;
+  width: 180px;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 5px;
+  border-radius: 10px;
+  gap: 10px;
+  border: 1px solid grey;
+  /* z-index: 100; */
+  background-color: #152b75;
+}
+.notes-priority {
+  width: 100px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  gap: 10px;
+  border: 1px solid grey;
+  position: absolute;
+  top: 262px;
+  right: 396px;
+  color: white;
+  font-weight: bold;
+  background-color: #152b75;
+  z-index: 999999;
+}
+.add-note-btn {
+  color: white;
+  background-color: #152b75;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px 20px;
+  border: 1px solid #152b75;
+  border-radius: 20px;
+}
+.add-note-btn:hover {
+  color: black;
+  background-color: white;
+  border: 1px solid #152b75;
+  transition: 0.6s;
+  /* transform: translateX(10px); */
+}
+.notes-card-disable-btn {
+  pointer-events: none;
+  background-color: lightgrey;
+  color: grey;
+  border: none;
+}
+.cursor-not-allowed {
+  cursor: not-allowed;
+}

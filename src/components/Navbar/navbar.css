@@ -1,0 +1,32 @@
+:root {
+  --filter-icon-hover: #354477;
+  --txt-white: white;
+  --txt-black: black;
+}
+.navbar-wrapper {
+  background-color: var(--notes-primary-color);
+  position: fixed;
+  top: 0;
+}
+.filter-icon {
+  color: var(--txt-white);
+  font-size: 25px;
+  cursor: pointer;
+  padding: 8px;
+  border: 1px solid var(--notes-primary-color);
+  border-radius: 50%;
+}
+.filter-icon:hover {
+  transition: 0.3s;
+  border: 1px solid var(--txt-white);
+  background-color: var(--filter-icon-hover);
+}
+.navbar-wrapper {
+  margin-top: 0px;
+  border-radius: 0px;
+}
+
+/* Secondary paytm color */
+/* {
+  color:#0F4A8A;
+} */

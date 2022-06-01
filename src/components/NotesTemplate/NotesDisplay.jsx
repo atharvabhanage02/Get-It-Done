@@ -48,7 +48,6 @@ const NotesDisplay = ({ notesData }) => {
             className="notes-card-icons card-archive-icon"
             onClick={() => {
               archiveNote(notesData);
-              notify();
             }}
           />
         )}

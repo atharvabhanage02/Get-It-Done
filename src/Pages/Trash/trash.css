@@ -1,0 +1,9 @@
+:root{
+    --trash-btn-bg : #4d4dff;
+}
+.trash-btn{
+    margin-top: 1.25rem;
+    background-color: var(--trash-btn-bg);
+    color: var(--txt-white);
+    text-decoration: none;
+}

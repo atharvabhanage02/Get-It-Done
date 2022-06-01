@@ -10,9 +10,12 @@ import {
 } from "../../Utils/icons";
 import { useNotes } from "../../Context/NotesContext/NotesContext";
 import { useLocation } from "react-router-dom";
+import { useArchives } from "../../Context/ArchiveContext/ArchiveContext";
 const NotesDisplay = ({ notesData }) => {
   const { title, description, color, priority, isPin, labels } = notesData;
-  const { updatePin, dispatchNote, deleteNote } = useNotes();
+  const { updatePin, dispatchNote, deleteNote, notesInTrash } = useNotes();
+  const { archiveNote, archiveNotes, restoreFromArchives, deleteFromArchive } =
+    useArchives();
   const { pathname } = useLocation();
   console.log("Pathname is", pathname);
   return (
@@ -40,10 +43,44 @@ const NotesDisplay = ({ notesData }) => {
       </div>
       <div className="notes-user-options">
         {pathname === "/notes" && (
-          <BiArchiveIn className="notes-card-icons card-archive-icon" />
+          <BiArchiveIn
+            className="notes-card-icons card-archive-icon"
+            onClick={() => {
+              archiveNote(notesData);
+            }}
+          />
+        )}
+        {pathname === "/archive" && (
+          <BiArchiveOut
+            className="notes-card-icons card-archive-icon"
+            onClick={() => {
+              restoreFromArchives(notesData._id);
+            }}
+          />
         )}
         {pathname === "/notes" && (
-          <AiOutlineDelete className="notes-card-icons card-delete-icon" />
+          <AiOutlineDelete
+            className="notes-card-icons card-delete-icon"
+            onClick={() => notesInTrash(notesData)}
+          />
+        )}
+        {pathname === "/archive" && (
+          <AiOutlineDelete
+            className="notes-card-icons card-delete-icon"
+            onClick={() => deleteFromArchive(notesData._id)}
+          />
+        )}
+        {pathname === "/trash" && (
+          <AiOutlineDelete
+            className="notes-card-icons card-delete-icon"
+            onClick={() => deleteNote(notesData)}
+          />
+        )}
+        {pathname === "/trash" && (
+          <FaTrashRestoreAlt
+            className="notes-card-icons card-delete-icon"
+            onClick={() => notesInTrash(notesData)}
+          />
         )}
         {pathname === "/notes" && (
           <BiEdit

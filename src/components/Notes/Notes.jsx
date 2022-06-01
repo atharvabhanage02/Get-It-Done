@@ -5,7 +5,9 @@ import { useNotes } from "../../Context/NotesContext/NotesContext";
 import { PinnedNotes } from "../PinnedNotes/PinnedNotes";
 export const Notes = () => {
   const { notesList } = useNotes();
-  const unPinnedNotes = notesList.filter((item) => !item.isPin);
+  const unPinnedNotes = notesList.filter(
+    (item) => !item.isPin && !item.inTrash
+  );
   return (
     <div className="main-content">
       <NotesCard />

@@ -1,0 +1,8 @@
+.all-archived-notes {
+  margin-top: 5rem;
+  display: flex;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}

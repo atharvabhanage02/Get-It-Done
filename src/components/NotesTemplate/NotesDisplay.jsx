@@ -10,18 +10,34 @@ import {
 } from "../../Utils/icons";
 import { useNotes } from "../../Context/NotesContext/NotesContext";
 import { useLocation } from "react-router-dom";
+import { useArchives } from "../../Context/ArchiveContext/ArchiveContext";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import {
+  notifyOnArchive,
+  notifyOnDelete,
+  notifyOnPin,
+  notifyOnUnpin,
+} from "../../Utils/notifications";
 const NotesDisplay = ({ notesData }) => {
   const { title, description, color, priority, isPin, labels } = notesData;
-  const { updatePin, dispatchNote, deleteNote } = useNotes();
+  const { updatePin, dispatchNote, deleteNote, notesInTrash } = useNotes();
+  const { archiveNote, archiveNotes, restoreFromArchives, deleteFromArchive } =
+    useArchives();
   const { pathname } = useLocation();
-  console.log("Pathname is", pathname);
   return (
     <div className={`notes-display-card ${color}`}>
       <div onClick={() => updatePin(notesData)}>
         {!isPin ? (
-          <BsPin className="notes-card-icons pin-icon " />
+          <BsPin
+            className="notes-card-icons pin-icon "
+            onClick={() => notifyOnPin()}
+          />
         ) : (
-          <BsPinFill className="notes-card-icons pin-icon " />
+          <BsPinFill
+            className="notes-card-icons pin-icon "
+            onClick={() => notifyOnUnpin()}
+          />
         )}
       </div>
 
@@ -40,20 +56,59 @@ const NotesDisplay = ({ notesData }) => {
       </div>
       <div className="notes-user-options">
         {pathname === "/notes" && (
-          <BiArchiveIn className="notes-card-icons card-archive-icon" />
+          <BiArchiveIn
+            className="notes-card-icons card-archive-icon"
+            onClick={() => {
+              archiveNote(notesData);
+              notifyOnArchive();
+            }}
+          />
+        )}
+        {pathname === "/archive" && (
+          <BiArchiveOut
+            className="notes-card-icons card-archive-icon"
+            onClick={() => {
+              restoreFromArchives(notesData._id);
+            }}
+          />
         )}
         {pathname === "/notes" && (
-          <AiOutlineDelete className="notes-card-icons card-delete-icon" />
+          <AiOutlineDelete
+            className="notes-card-icons card-delete-icon"
+            onClick={() => {
+              notesInTrash(notesData);
+              notifyOnDelete();
+            }}
+          />
+        )}
+        {pathname === "/archive" && (
+          <AiOutlineDelete
+            className="notes-card-icons card-delete-icon"
+            onClick={() => deleteFromArchive(notesData._id)}
+          />
+        )}
+        {pathname === "/trash" && (
+          <AiOutlineDelete
+            className="notes-card-icons card-delete-icon"
+            onClick={() => deleteNote(notesData)}
+          />
+        )}
+        {pathname === "/trash" && (
+          <FaTrashRestoreAlt
+            className="notes-card-icons card-delete-icon"
+            onClick={() => notesInTrash(notesData)}
+          />
         )}
         {pathname === "/notes" && (
           <BiEdit
             className="notes-card-icons"
-            onClick={() =>
-              dispatchNote({ type: "UPDATE_NOTE", payload: notesData })
-            }
+            onClick={() => {
+              dispatchNote({ type: "UPDATE_NOTE", payload: notesData });
+            }}
           />
         )}
       </div>
+      <ToastContainer />
     </div>
   );
 };

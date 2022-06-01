@@ -45,3 +45,6 @@
   font-weight: bold;
   border: 1px solid var(--txt-black);
 }
+.Toastify__toast-theme--colored.Toastify__toast--success {
+  --toastify-color-success: var(--notes-primary-color);
+}

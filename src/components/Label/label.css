@@ -1,0 +1,57 @@
+.label-container {
+  border: 1px solid var(--notes-primary-color);
+  width: 12.81rem;
+  padding: 5px;
+  position: relative;
+  border-radius: 10px;
+  top: -3.12rem;
+  left: 23.75rem;
+  color: var(--txt-white);
+  background-color: var(--notes-primary-color);
+}
+.label-input {
+  margin: 5px;
+  padding: 3px;
+  border-radius: 5px;
+  width: 6.25rem;
+}
+.label-tag-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 10px 7px;
+}
+.label-tag {
+  border: 1px solid var(--txt-grey-300);
+  font-size: 14px;
+  width: fit-content;
+  padding: 3px;
+  border-radius: 10px;
+  margin: 5px;
+}
+.close-tag {
+  padding: 1px 4px;
+  font-size: 12px;
+  font-weight: bold;
+  margin: 2px;
+  cursor: pointer;
+  color: var(--txt-grey-300);
+}
+.close-tag:hover {
+  border-radius: 50%;
+  color: var(--dark-red);
+  border: 1px solid var(--grey-300);
+}
+.close-label-option {
+  position: absolute;
+  font-size: 12px;
+  top: 0px;
+  right: 0px;
+}
+.add-label-btn {
+  padding: 5px;
+  cursor: pointer;
+  color: var(--txt-white);
+  background-color: var(--notes-primary-color);
+  border: 1px solid var(--txt-white);
+  border-radius: 10px;
+}

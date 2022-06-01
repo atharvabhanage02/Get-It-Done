@@ -12,7 +12,7 @@ import { useNotes } from "../../Context/NotesContext/NotesContext";
 import { useLocation } from "react-router-dom";
 const NotesDisplay = ({ notesData }) => {
   const { title, description, color, priority, isPin, labels } = notesData;
-  const { updatePin, dispatchNote } = useNotes();
+  const { updatePin, dispatchNote, deleteNote } = useNotes();
   const { pathname } = useLocation();
   console.log("Pathname is", pathname);
   return (

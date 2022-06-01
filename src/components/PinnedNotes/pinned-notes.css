@@ -1,0 +1,14 @@
+.pinned-notes-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.pinned-notes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+  margin: 2.5rem 10px;
+}

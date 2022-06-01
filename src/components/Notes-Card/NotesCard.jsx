@@ -6,6 +6,8 @@ import { useNotes } from "../../Context/NotesContext/NotesContext";
 import { ColorPallete } from "../ColorPallete/ColorPallete";
 import { Priority } from "../Priority/Priority";
 import { Label } from "../Label/Label";
+import { ToastContainer } from "react-toastify";
+import { notifyAddNote } from "../../Utils/notifications";
 const NotesCard = () => {
   const [showColors, setColors] = useState(false);
   const [showPriorityOptions, setPriorityOptions] = useState(false);
@@ -22,6 +24,7 @@ const NotesCard = () => {
     }
     dispatchNote({ type: "CLEAR_INPUTS" });
   };
+
   return (
     <div className="notes-card-wrapper">
       <div className="notes-card" style={{ backgroundColor: noteState.color }}>
@@ -87,7 +90,10 @@ const NotesCard = () => {
                     ? "notes-card-disable-btn"
                     : ""
                 } `}
-                onClick={(e) => submitHandler(e)}
+                onClick={(e) => {
+                  submitHandler(e);
+                  notifyAddNote();
+                }}
               >
                 {isNotePresent ? "Update" : "Add"}
               </button>
@@ -98,6 +104,7 @@ const NotesCard = () => {
       </div>
       {showPriorityOptions && <Priority showPriority={setPriorityOptions} />}
       {showlabels && <Label showlabels={setShowLabels} />}
+      <ToastContainer />
     </div>
   );
 };

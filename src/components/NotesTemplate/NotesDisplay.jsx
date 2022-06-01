@@ -11,8 +11,14 @@ import {
 import { useNotes } from "../../Context/NotesContext/NotesContext";
 import { useLocation } from "react-router-dom";
 import { useArchives } from "../../Context/ArchiveContext/ArchiveContext";
-import { ToastContainer, toast } from "react-toastify";
+import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import {
+  notifyOnArchive,
+  notifyOnDelete,
+  notifyOnPin,
+  notifyOnUnpin,
+} from "../../Utils/notifications";
 const NotesDisplay = ({ notesData }) => {
   const { title, description, color, priority, isPin, labels } = notesData;
   const { updatePin, dispatchNote, deleteNote, notesInTrash } = useNotes();
@@ -23,9 +29,15 @@ const NotesDisplay = ({ notesData }) => {
     <div className={`notes-display-card ${color}`}>
       <div onClick={() => updatePin(notesData)}>
         {!isPin ? (
-          <BsPin className="notes-card-icons pin-icon " />
+          <BsPin
+            className="notes-card-icons pin-icon "
+            onClick={() => notifyOnPin()}
+          />
         ) : (
-          <BsPinFill className="notes-card-icons pin-icon " />
+          <BsPinFill
+            className="notes-card-icons pin-icon "
+            onClick={() => notifyOnUnpin()}
+          />
         )}
       </div>
 
@@ -48,6 +60,7 @@ const NotesDisplay = ({ notesData }) => {
             className="notes-card-icons card-archive-icon"
             onClick={() => {
               archiveNote(notesData);
+              notifyOnArchive();
             }}
           />
         )}
@@ -62,7 +75,10 @@ const NotesDisplay = ({ notesData }) => {
         {pathname === "/notes" && (
           <AiOutlineDelete
             className="notes-card-icons card-delete-icon"
-            onClick={() => notesInTrash(notesData)}
+            onClick={() => {
+              notesInTrash(notesData);
+              notifyOnDelete();
+            }}
           />
         )}
         {pathname === "/archive" && (
@@ -86,9 +102,9 @@ const NotesDisplay = ({ notesData }) => {
         {pathname === "/notes" && (
           <BiEdit
             className="notes-card-icons"
-            onClick={() =>
-              dispatchNote({ type: "UPDATE_NOTE", payload: notesData })
-            }
+            onClick={() => {
+              dispatchNote({ type: "UPDATE_NOTE", payload: notesData });
+            }}
           />
         )}
       </div>

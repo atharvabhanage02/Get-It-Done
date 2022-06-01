@@ -11,6 +11,8 @@ import {
 import { useNotes } from "../../Context/NotesContext/NotesContext";
 import { useLocation } from "react-router-dom";
 import { useArchives } from "../../Context/ArchiveContext/ArchiveContext";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 const NotesDisplay = ({ notesData }) => {
   const { title, description, color, priority, isPin, labels } = notesData;
   const { updatePin, dispatchNote, deleteNote, notesInTrash } = useNotes();
@@ -18,6 +20,9 @@ const NotesDisplay = ({ notesData }) => {
     useArchives();
   const { pathname } = useLocation();
   console.log("Pathname is", pathname);
+  const notify = () => {
+    toast("Archives Done");
+  };
   return (
     <div className={`notes-display-card ${color}`}>
       <div onClick={() => updatePin(notesData)}>
@@ -47,6 +52,7 @@ const NotesDisplay = ({ notesData }) => {
             className="notes-card-icons card-archive-icon"
             onClick={() => {
               archiveNote(notesData);
+              notify();
             }}
           />
         )}
@@ -91,6 +97,7 @@ const NotesDisplay = ({ notesData }) => {
           />
         )}
       </div>
+      <ToastContainer />
     </div>
   );
 };

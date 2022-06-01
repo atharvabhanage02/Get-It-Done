@@ -19,10 +19,6 @@ const NotesDisplay = ({ notesData }) => {
   const { archiveNote, archiveNotes, restoreFromArchives, deleteFromArchive } =
     useArchives();
   const { pathname } = useLocation();
-  console.log("Pathname is", pathname);
-  const notify = () => {
-    toast("Archives Done");
-  };
   return (
     <div className={`notes-display-card ${color}`}>
       <div onClick={() => updatePin(notesData)}>

@@ -1,10 +1,12 @@
 import { createContext, useContext, useEffect, useState } from "react";
 import { useAuth } from "../Auth/auth-context";
 import { useNotes } from "../NotesContext/NotesContext";
-import { addToArchiveNoteService } from "../../Services/ArchiveServices/addToArchiveService";
-import { deleteFromArchiveService } from "../../Services/ArchiveServices/deleteFromArchiveService";
-import { getArchiveNotesService } from "../../Services/ArchiveServices/getArchiveNotesService";
-import { restoreArchivedNotesService } from "../../Services/ArchiveServices/restoreArchivedNotes";
+import {
+  addToArchiveNoteService,
+  deleteFromArchiveService,
+  getArchiveNotesService,
+  restoreArchivedNotesService,
+} from "../../Services/ArchiveServices";
 
 const ArchivesContext = createContext();
 const ArchivesProvider = ({ children }) => {

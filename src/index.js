@@ -7,6 +7,7 @@ import { AuthProvider } from "./Context/Auth/auth-context";
 import { BrowserRouter } from "react-router-dom";
 import { NotesProvider } from "./Context/NotesContext/NotesContext";
 import { ArchivesProvider } from "./Context/ArchiveContext/ArchiveContext";
+import { FilterProvider } from "./Context/FilterContext/FilterContext";
 // Call make Server
 makeServer();
 
@@ -16,7 +17,9 @@ ReactDOM.render(
       <AuthProvider>
         <NotesProvider>
           <ArchivesProvider>
-            <App />
+            <FilterProvider>
+              <App />
+            </FilterProvider>
           </ArchivesProvider>
         </NotesProvider>
       </AuthProvider>

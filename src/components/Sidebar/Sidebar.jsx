@@ -28,14 +28,6 @@ export const Sidebar = () => {
           </Link>
           <Link
             className={`category-names ${
-              pathname === "/label" ? "cta-bg" : "white"
-            } `}
-            to=""
-          >
-            <BiLabel className="home-page-icons" /> Labels
-          </Link>
-          <Link
-            className={`category-names ${
               pathname === "/trash" ? "cta-bg" : "white"
             } `}
             to="/trash"

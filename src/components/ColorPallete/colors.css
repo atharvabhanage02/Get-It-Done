@@ -1,0 +1,30 @@
+:root {
+  --note-color-1: #efcb68;
+  --note-color-2: #e1efe6;
+  --note-color-3: #caffd0;
+  --note-color-4: #a9a587;
+  --note-color-5: #fbd1a2;
+  --note-color-6: #7dcfb6;
+  --note-color-7: #e5a4cb;
+}
+.color-1 {
+  background-color: var(--note-color-1);
+}
+.color-2 {
+  background-color: var(--note-color-2);
+}
+.color-3 {
+  background-color: var(--note-color-3);
+}
+.color-4 {
+  background-color: var(--note-color-4);
+}
+.color-5 {
+  background-color: var(--note-color-5);
+}
+.color-6 {
+  background-color: var(--note-color-6);
+}
+.color-7 {
+  background-color: var(--note-color-7);
+}

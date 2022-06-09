@@ -81,6 +81,7 @@
   right: 7.5rem;
   width: 11.25rem;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-evenly;
   padding: 5px;
   border-radius: 10px;

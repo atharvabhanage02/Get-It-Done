@@ -27,7 +27,7 @@ const NotesCard = () => {
 
   return (
     <div className="notes-card-wrapper">
-      <div className="notes-card" style={{ backgroundColor: noteState.color }}>
+      <div className={`notes-card ${noteState.color}`}>
         <form action="">
           <div className="user-input-field">
             <input

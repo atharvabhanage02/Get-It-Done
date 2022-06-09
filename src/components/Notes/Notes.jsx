@@ -1,11 +1,11 @@
 import "./notes.css";
 import { NotesCard } from "../Notes-Card/NotesCard";
 import { NotesDisplay } from "../NotesTemplate/NotesDisplay";
-import { useNotes } from "../../Context/NotesContext/NotesContext";
 import { PinnedNotes } from "../PinnedNotes/PinnedNotes";
+import { useFilters } from "../../Context/FilterContext/FilterContext";
 export const Notes = () => {
-  const { notesList } = useNotes();
-  const unPinnedNotes = notesList.filter(
+  const { finalFilteredNotes } = useFilters();
+  const unPinnedNotes = finalFilteredNotes.filter(
     (item) => !item.isPin && !item.inTrash
   );
   return (

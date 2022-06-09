@@ -1,14 +1,15 @@
-import { Link } from "react-router-dom";
 import { FiFilter } from "react-icons/fi";
 import { FiLogOut } from "react-icons/fi";
 import "./navbar.css";
 import { useAuth } from "../../Context/Auth/auth-context";
+import { useState } from "react";
+import { Filter } from "../Filters/Filters";
 export const Navbar = () => {
   const {
     auth: { isLogIn },
     logOutUser,
   } = useAuth();
-
+  const [filterOption, showFilterOption] = useState(false);
   return (
     <nav class="navbar">
       <div class="navbar-wrapper">
@@ -29,10 +30,13 @@ export const Navbar = () => {
         <div class="user-activity-details">
           {isLogIn && (
             <span data-tooltip="Filter">
-              <FiFilter className="filter-icon" />
+              <FiFilter
+                className="filter-icon"
+                onClick={() => showFilterOption((prev) => !prev)}
+              />
             </span>
           )}
-
+          {filterOption && <Filter showFilters={showFilterOption} />}
           {isLogIn && (
             <span data-tooltip="Logout">
               <FiLogOut className="filter-icon" onClick={() => logOutUser()} />

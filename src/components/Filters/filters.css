@@ -1,0 +1,25 @@
+:root {
+  --notes-primary-color: #152b75;
+  --txt-white: white;
+  --txt-black: black;
+  --filter-container-borde: #86a0f3;
+}
+.filter-container {
+  color: var(--txt-white);
+  border: 1px solid var(--filter-container-borde);
+  position: absolute;
+  padding: 8px;
+  background-color: var(--notes-primary-color);
+  border-radius: 10px;
+  top: 2.81rem;
+  right: 1.62rem;
+}
+.clear-filter-btn {
+  font-size: 14px;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
+  position: absolute;
+  top: 5px;
+  right: 7px;
+}

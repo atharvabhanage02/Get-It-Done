@@ -1,70 +1,74 @@
-# Getting Started with Create React App
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/90499683/178785515-54039652-647f-41a4-953e-e2e6babcc9d8.png"></img>
+</p>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Behold the Power of Productivity !!
+## Get all your work Done using [GetItDone](https://get-it-done-notes-app.netlify.app/)
 
-## Available Scripts
+## Run Locally
 
-In the project directory, you can run:
+Clone the project
 
-### `yarn start`
+```bash
+  git clone https://github.com/atharvabhanage02/notes-app.git
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Go to the project directory
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+```bash
+  cd notes-app
+```
 
-### `yarn test`
+Install dependencies
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```bash
+  npm install
+```
 
-### `yarn build`
+Start the server
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+  npm run start
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Tech Stack
 
-### `yarn eject`
+**Frontend:** 
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- React
+- React Router DOM
+- Apex Component Library
+- Context API
+- UseReducer Hook
+- Toastify
+- LocalStorage
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+**Backend:** 
+- Mockbee Mock Backend
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Features
 
-## Learn More
+- Authentication
+    - Login
+    - Login as Guest
+    - Logout
+- Create Note
+  - Add Color to Note
+  - Add Priority to Note
+  - Add Label to Note
+- Edit Note
+- Pin and UnPin Note
+- Archive Note
+- Restore Note from Archive
+- Delete Note
+- Restore Note from Trash
+- Filter Notes
+  - Filter Notes by Priority
+  - Filter Notes by Labels
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 🔗 Links
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/atharva-bhanage-02/)
+[![twitter](https://img.shields.io/badge/twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/AtharvaBhanage)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

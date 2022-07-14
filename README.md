@@ -5,6 +5,10 @@
 # Behold the Power of Productivity !!
 ## Get all your work Done using [GetItDone](https://get-it-done-notes-app.netlify.app/)
 
+## Demo
+
+https://user-images.githubusercontent.com/90499683/178913157-eb0d46e6-3721-417a-b1a4-d7f11353aa82.mp4
+
 ## Run Locally
 
 Clone the project
